@@ -22,7 +22,7 @@ export default function Login() {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
-            <div className="w-full h-full max-w-md p-6 bg-gray-800 rounded-lg shadow-md h-100">
+            <div className="w-full h-full max-w-md p-6 rounded-lg shadow-md h-100">
                 <h2 className="text-2xl font-bold text-center text-green-400">Login</h2>
                 <form onSubmit={handleSubmit} className="mt-4">
                     <div>
@@ -45,13 +45,13 @@ export default function Login() {
                             placeholder="Enter password"
                         />
                     </div>
-                    {error && <p className="mt-6 text-sm text-red-500 text-center">{error}</p>}
                     <button
                         type="submit"
-                        className="w-full mt-4 px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
-                    >
+                        className="w-full mt-10 px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600 focus:outline-none focus:ring focus:ring-green-300"
+                        >
                         Login
                     </button>
+                        {error && <p className="mt-6 text-sm text-red-500 text-center">{error}</p>}
                 </form>
             </div>
         </div>
