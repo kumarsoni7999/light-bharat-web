@@ -1,8 +1,12 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Login() {
+
+    const router = useRouter()
+
     const [mobile, setMobile] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -16,8 +20,7 @@ export default function Login() {
             return;
         }
 
-        console.log('Logging in with:', { mobile, password });
-        // Add authentication logic here
+        router.push('/dashboard')
     };
 
     return (
